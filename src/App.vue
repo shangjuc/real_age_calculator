@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <SevenTeen msg="17歲計算器"/>
+    <SevenTeen msg="真實年齡計算器"/>
   </div>
 </template>
 

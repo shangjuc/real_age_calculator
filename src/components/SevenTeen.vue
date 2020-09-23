@@ -114,6 +114,10 @@ div.bg{
   width: 100%;
   height: 100%;
   position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 0px;
+  margin: 0px;
 
 }
 div.center-container{
@@ -146,15 +150,15 @@ div.center-container{
   }
 
   p{
-    text-align: left;
-    padding-left: 100px;
-  }
-  span.age_yy,
-  span.age_dd{
-    font-size: 2em;
-  }
-  .fake_age{
-    color: #a0a0a0;
+    // text-align: left;
+    // padding-left: 100px;
+    &.fake_age{
+      color: #a0a0a0;
+    }
+    span.age_yy,
+    span.age_dd{
+      font-size: 2em;
+    }
   }
 
   input[type=number]{

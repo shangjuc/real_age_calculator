@@ -8,9 +8,25 @@
         <!-- <h3>現在時間:{{real_age_today}}</h3> -->
 
         <p>您的生日:
-          <input class="birth_yy" type="number" v-model="birth_yy" max="2020" min="1920" v-on:click="recycle_dd()">年
-          <input type="number" v-model="birth_mm" max="13" min="0" v-on:click="recycle_mm()" :keyup="recycle_mm()">月
-          <input type="number" v-model="birth_dd" :max="max_of_dd+1" min="0" v-on:click="recycle_dd()" v-on:keyup="recycle_dd()">日
+          <input class="birth_yy" type="number" 
+            v-model="birth_yy" 
+            max="2020" 
+            min="1920" 
+            >年
+          <input type="number" 
+            v-model="birth_mm" 
+            max="13" 
+            min="0" 
+            :click="recycle_mm()" 
+            :keyup="recycle_mm()" 
+            @wheel="recycle_mm()">月
+          <input type="number" 
+            v-model="birth_dd" 
+            :max="max_of_dd + 1" 
+            min="0" 
+            :click="recycle_dd" 
+            :keyup="recycle_dd()" 
+            >日
           <!-- <input type="date" v-model="birth_day" max="2020-01-01" min="1900-01-01"> -->
           <!-- {{birth_day}} -->
         </p>
@@ -52,13 +68,14 @@ export default {
       }
     },
     recycle_dd: function() {
-      if(this.birth_dd > this.max_of_dd){
+      let mx = this.max_of_dd
+      if(this.birth_dd > mx){
         this.birth_dd = 1;
       } else if(this.birth_dd < 1){
-        let DD = this.max_of_dd
-        this.birth_dd =DD;        
+        this.birth_dd =mx;        
       }
     },
+  
     
   },
   computed: {

@@ -3,11 +3,11 @@
     <div class="bg">
       <div class="center-container">
         <h1>{{ msg }}</h1>
-        <h2>找到您的真實年齡</h2>
+        <h2>找到我的真實年齡</h2>
 
         <!-- <h3>現在時間:{{real_age_today}}</h3> -->
 
-        <p>您的生日:
+        <p>我的生日:
           <input class="birth_yy" type="number" 
             v-model="birth_yy" 
             max="2020" 
@@ -24,18 +24,17 @@
             v-model="birth_dd" 
             :max="max_of_dd + 1" 
             min="0" 
-            :click="recycle_dd" 
-            :keyup="recycle_dd()" 
-            >日
+            :click="recycle_dd()" 
+            :keyup="recycle_dd()">日
           <!-- <input type="date" v-model="birth_day" max="2020-01-01" min="1900-01-01"> -->
           <!-- {{birth_day}} -->
         </p>
         
-        <p class="fake_age">您的虛假年齡: 
+        <p class="fake_age">我的虛假年齡: 
           <span class="age_yy">{{fake_age_yy}}</span>歲又
           <span class="age_dd">{{fake_age_dd}}</span>天
         </p>
-        <p class="real_age">您的真實年齡: 
+        <p class="real_age">我的真實年齡: 
           <span class="age_yy">17</span>歲又
           <span class="age_dd">{{real_age_dd}}</span>天
         </p>

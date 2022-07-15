@@ -10,7 +10,7 @@
         <p>您的生日:
           <input class="birth_yy" type="number" 
             v-model="birth_yy" 
-            max="2020" 
+            max="this_yy" 
             min="1920" 
             >年
           <input type="number" 
@@ -52,7 +52,9 @@ export default {
     msg: String,
   },
   data: function(){
+    let today = new Date();
     return {
+      this_yy: today.getFullYear(),
       birth_yy: 1999,
       birth_mm: 1,
       birth_dd: 1,
@@ -97,9 +99,9 @@ export default {
       return DD
     },
     fake_age_yy: function () {
-      let yy = 2020 - Number(this.birth_yy);
+      let yy = this.this_yy - Number(this.birth_yy);
       if(this.jjj){
-        yy = 2020 - Number(this.birth_yy) - 1;
+        yy = this.this_yy - Number(this.birth_yy) - 1;
       }
       return yy
     },
@@ -127,7 +129,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 div.bg{
-  background: #393e46;
+  background: #1A1A1A;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -140,8 +142,8 @@ div.bg{
 div.center-container{
   width: 500px;
   height: 500px;
-  background: #393e46;
-  border: 5px solid lightblue;
+  background: #1A1A1A;
+  border: 5px solid #41B883;
   border-radius: 50%;
   box-sizing: border-box;
   position: absolute;

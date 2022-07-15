@@ -1,24 +1,5 @@
-# hello-world
+# real_age_calculator
 
-## Project setup
-```
-npm install
-```
+真實年齡計算機
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+https://shangjuc.github.io/real_age_calculator/dist/index.html
